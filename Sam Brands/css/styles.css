@@ -1,0 +1,510 @@
+/* ============================================================
+   Main color: #FFCC00 (yellow)
+   Background: dark gradient
+   ============================================================ */
+
+/* ---- A few colors saved here so they are easy to change ---- */
+:root {
+  --yellow: #FFCC00;
+  --dark-text: #1a1400;   /* used for text on top of yellow */
+  --gray: #9296a0;        /* soft gray for paragraphs */
+  --card: #16161a;        /* card background */
+  --border: #2a2a32;
+}
+
+/* ---- Reset basic spacing ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #f3f3f3;
+  line-height: 1.5;
+
+  /* dark gradient background */
+  background: linear-gradient(180deg, #1a1712 0%, #0a0a0a 55%, #000000 100%);
+  min-height: 100vh;
+}
+
+/* the yellow highlight used inside headings */
+.yellow {
+  color: var(--yellow);
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  padding: 18px 30px;
+}
+
+/* centers the header content so the logo is inset, not jammed left */
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* small yellow button on the right (where Sign In used to be) */
+.header-button {
+  background: var(--yellow);
+  color: var(--dark-text);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+}
+
+.header-button:hover {
+  background: #ffd633;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 42px;
+  height: 42px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* "StoryOS" wordmark — bold and a little wider */
+.logo-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 0.5px;
+}
+
+.logo-tag {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  max-width: 1000px;     /* keeps the text centered and wide */
+  margin: 0 auto;
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+/* Big, bold, wide headline (matches the screenshot) */
+.hero-title {
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+
+.hero-text {
+  max-width: 680px;
+  margin: 24px auto 0;
+  font-size: 19px;
+  color: var(--gray);
+}
+
+/* Video placeholder box */
+.video {
+  position: relative;
+  max-width: 900px;
+  margin: 45px auto 0;
+  aspect-ratio: 16 / 9;          /* keeps a video shape */
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.video-label {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.06);
+}
+
+.sound-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ============ TESTIMONIAL + STATS + BUTTON ============ */
+.proof {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Testimonial card */
+.quote-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(255, 204, 0, 0.08);  /* soft yellow glow */
+}
+
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  font-size: 50px;
+  color: var(--yellow);
+  font-family: Georgia, serif;
+}
+
+.quote-text {
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.quote-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* round avatar with initials */
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--dark-text);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person-name {
+  font-weight: 800;
+  text-align: left;
+}
+
+.stars {
+  color: var(--yellow);
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+/* Stats row */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin: 70px 0 50px;
+  flex-wrap: wrap;          /* stacks nicely on small screens */
+}
+
+.stat-number {
+  font-size: 58px;
+  font-weight: 800;
+  color: var(--yellow);
+}
+
+.stat-label {
+  font-size: 16px;
+  color: var(--gray);
+}
+
+/* Yellow button */
+.cta-button {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--dark-text);
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 16px 34px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.3);
+}
+
+.cta-button:hover {
+  background: #ffd633;
+}
+
+/* ===================== PROBLEM SECTION ===================== */
+.problem {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 70px 20px 90px;
+}
+
+.problem-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 36px;
+}
+
+.problem-text p {
+  color: var(--gray);
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+/* ===================== "GOT QUESTIONS?" BUTTON ===================== */
+.help-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--yellow);
+  color: var(--dark-text);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.4);
+}
+
+/* ===================== MOBILE (small screens) ===================== */
+@media (max-width: 600px) {
+  .hero-title { font-size: 34px; }
+  .hero-text  { font-size: 16px; }
+  .quote-text { font-size: 19px; }
+  .stats      { gap: 30px; }
+  .stat-number { font-size: 42px; }
+  .problem-title { font-size: 26px; }
+  .logo-tag { display: none; }   /* hide the small tagline on phones */
+
+  /* header tidy-up for phones */
+  .header { padding: 14px 18px; }
+  .logo-name { font-size: 18px; white-space: nowrap; }  /* keeps "Sam Media" on one line */
+  .logo-img { width: 34px; height: 34px; }
+  .header-button { font-size: 13px; padding: 8px 14px; }  /* smaller button */
+}
+
+
+/* ===================== HOW IT WORKS / STEPS ===================== */
+/* full-width dark band */
+.process {
+  background: #151518;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* keeps the text and steps centered in the middle */
+.process-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.process-text {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: var(--gray);
+}
+
+/* the row of steps */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  position: relative;
+}
+
+/* the line that connects the dots */
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 18px;            /* lines up with the middle of the dots */
+  left: 6%;
+  right: 6%;
+  height: 2px;
+  background: #333;
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  z-index: 1;           /* sit on top of the line */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--dark-text);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.step-label {
+  font-size: 14px;
+  color: var(--gray);
+  max-width: 130px;
+}
+
+/* ----- phones: turn the row into a vertical list ----- */
+@media (max-width: 600px) {
+  .process-title { font-size: 26px; }
+
+  .steps {
+    flex-direction: column;
+    gap: 22px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* turn the horizontal line into a vertical one on the left */
+  .steps::before {
+    top: 0;
+    bottom: 0;
+    left: 17px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .step {
+    flex-direction: row;   /* dot beside the label */
+    align-items: center;
+    gap: 14px;
+  }
+
+  .step-dot { margin-bottom: 0; }
+
+  .step-label {
+    font-size: 15px;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+/* ===================== STEP DETAILS ===================== */
+.journey {
+  background: #151518;
+  padding: 30px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-item {
+  position: relative;
+  padding: 55px 0;
+}
+
+.ghost-num {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.journey-item.ghost-right .ghost-num {
+  left: auto;
+  right: -30px;
+}
+
+.journey-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin-left: 230px;
+}
+
+.item-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.item-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 204, 0, 0.15);
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-tag {
+  border: 1px solid var(--yellow);
+  color: var(--yellow);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.item-title {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.item-desc {
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 16px;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+/* ----- phones ----- */
+@media (max-width: 600px) {
+  .journey-item { padding: 34px 0; }
+  .ghost-num { font-size: 90px; top: -10px; }
+  .journey-content { margin-left: 0; }
+  .item-title { font-size: 24px; }
+  .item-desc { font-size: 15px; }
+}
