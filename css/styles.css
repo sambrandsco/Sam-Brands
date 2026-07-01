@@ -25,7 +25,7 @@ body {
   line-height: 1.5;
 
   /* dark gradient background */
-  background: linear-gradient(180deg, #1a1712 0%, #0a0a0a 55%, #000000 100%);
+  background: #000000;
   min-height: 100vh;
 }
 
