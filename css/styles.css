@@ -872,3 +872,9 @@ body {
   .legal h1 { font-size: 28px; }
   .legal h2 { font-size: 18px; }
 }
+
+
+.legal-logo {
+  text-decoration: none;
+  color: inherit;
+}
