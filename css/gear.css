@@ -1,0 +1,44 @@
+/* ===================== CREATOR GEAR GUIDE ===================== */
+.gear-hero{max-width:900px;margin:0 auto;padding:60px 24px 30px;text-align:center;}
+.gear-pill{display:inline-block;background:rgba(255,204,0,0.12);color:var(--yellow);font-size:12px;font-weight:800;letter-spacing:1px;padding:6px 16px;border-radius:20px;margin-bottom:18px;}
+.gear-hero h1{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:900;line-height:1.1;}
+.gear-hero .sub{color:var(--gray);font-size:18px;margin-top:16px;}
+.how-box{max-width:820px;margin:36px auto 0;background:var(--card);border:1px solid var(--border);border-left:4px solid var(--yellow);border-radius:14px;padding:24px 26px;text-align:left;color:#cfd2d8;font-size:15px;}
+.how-box a{color:var(--yellow);text-decoration:underline;}
+
+.tiers{max-width:1000px;margin:0 auto;padding:40px 24px 20px;display:flex;flex-direction:column;gap:30px;}
+.tier-card{background:linear-gradient(150deg,#1b1b22,#141419);border:1px solid var(--border);border-radius:20px;padding:36px 38px;transition:transform .3s,border-color .3s,box-shadow .3s;}
+.tier-card:hover{transform:translateY(-4px);border-color:rgba(255,204,0,0.5);box-shadow:0 0 45px rgba(255,204,0,0.12);}
+.tier-top{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+.tier-emoji{font-size:40px;line-height:1;}
+.tier-price{font-size:32px;font-weight:900;color:var(--yellow);}
+.tier-name{font-size:15px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;}
+.tier-tagline{font-size:18px;font-style:italic;color:#e5e7ea;margin-bottom:14px;}
+.tier-desc{color:var(--gray);font-size:15px;margin-bottom:10px;}
+.gear-groups{margin-top:22px;display:flex;flex-direction:column;gap:22px;}
+.gear-cat{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;}
+.gear-cat-ico{width:30px;height:30px;border-radius:8px;background:rgba(255,204,0,0.12);display:flex;align-items:center;justify-content:center;}
+.gear-cat-ico svg{width:17px;height:17px;}
+.gear-items{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.gear-items li{position:relative;padding-left:22px;font-size:15px;color:#cfd2d8;line-height:1.55;}
+.gear-items li::before{content:"";position:absolute;left:2px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--yellow);}
+.gear-link{color:var(--yellow);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(255,204,0,0.4);}
+.gear-link:hover{border-bottom-color:var(--yellow);}
+.tier-total{margin-top:26px;padding-top:20px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.tier-total span{color:var(--gray);font-size:14px;}
+.tier-total strong{color:var(--yellow);font-size:22px;font-weight:900;}
+
+.tips-sec{max-width:1000px;margin:40px auto;padding:0 24px 30px;}
+.tips-sec h2{text-align:center;font-size:32px;font-weight:800;margin-bottom:36px;}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px;display:flex;gap:14px;transition:border-color .25s,box-shadow .25s;}
+.tip-card:hover{border-color:rgba(255,204,0,0.4);box-shadow:0 0 25px rgba(255,204,0,0.1);}
+.tip-num{width:30px;height:30px;flex-shrink:0;border-radius:50%;background:var(--yellow);color:var(--dark-text);font-weight:800;display:flex;align-items:center;justify-content:center;}
+.tip-card p{font-size:14.5px;color:#cfd2d8;line-height:1.6;}
+.affiliate-note{text-align:center;color:var(--gray);font-size:13px;font-style:italic;margin-top:30px;opacity:.85;}
+
+@media (max-width:600px){
+  .tier-card{padding:26px 22px;}
+  .tier-price{font-size:26px;}
+  .gear-hero h1{font-size:2rem;}
+}
