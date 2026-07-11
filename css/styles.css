@@ -457,8 +457,9 @@ html {
 .journey-content {
   position: relative;
   z-index: 1;
-  max-width: 1000px;
-  margin-left: 230px;
+  max-width: 820px;
+  margin: 0 auto;          /* centers the content */
+  padding: 0 24px;
 }
 
 .item-top {
@@ -662,9 +663,11 @@ html {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   align-items: start;
+  max-width: 820px;     /* keeps 2 cards centered, not too wide */
+  margin: 0 auto;
 }
 
 .price-card {
