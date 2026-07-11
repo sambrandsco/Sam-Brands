@@ -34,6 +34,10 @@ body {
   color: var(--yellow);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===================== HEADER ===================== */
 .header {
   padding: 18px 30px;
@@ -79,7 +83,7 @@ body {
   flex-direction: column;
 }
 
-/* "StoryOS" wordmark — bold and a little wider */
+/* wordmark — bold and a little wider */
 .logo-name {
   font-size: 22px;
   font-weight: 800;
@@ -509,6 +513,60 @@ body {
   .item-desc { font-size: 15px; }
 }
 
+
+/* ===== Steps section — infographic add-ons ===== */
+
+/* glow tagline chip */
+.info-chip {
+  display: inline-flex; align-items: center; gap: 9px; margin-top: 22px;
+  background: linear-gradient(145deg, rgba(255,204,0,0.16), rgba(255,204,0,0.06));
+  border: 1px solid rgba(255,204,0,0.45); color: var(--yellow);
+  font-size: 14px; font-weight: 800; padding: 10px 20px; border-radius: 26px;
+  box-shadow: 0 0 22px rgba(255,204,0,0.14);
+}
+.info-chip svg { width: 16px; height: 16px; }
+
+/* asset chips (step 3) */
+.asset-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.asset {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+  border-radius: 10px; padding: 9px 15px; font-size: 13.5px; font-weight: 600; color: #d0d2d8;
+}
+.asset svg { width: 16px; height: 16px; color: var(--yellow); }
+
+/* mini card grid (steps 4 & 5) */
+.mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
+.mini-card {
+  background: linear-gradient(150deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
+  border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.mini-card:hover { transform: translateY(-4px); border-color: rgba(255,204,0,0.55); box-shadow: 0 0 30px rgba(255,204,0,0.13); }
+.mc-top { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+.mc-num {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(255,204,0,0.16); color: var(--yellow);
+  font-size: 12px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.mc-ico { color: var(--yellow); display: flex; }
+.mc-ico svg { width: 17px; height: 17px; }
+.mc-title { font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+.mc-desc { font-size: 13px; color: var(--gray); line-height: 1.55; }
+
+/* CTA button (step 6) */
+.step-cta {
+  display: inline-block; margin-top: 30px;
+  background: var(--yellow); color: var(--dark-text);
+  font-size: 16px; font-weight: 800; text-decoration: none;
+  padding: 14px 32px; border-radius: 28px;
+  box-shadow: 0 0 30px rgba(255,204,0,0.35); transition: transform .2s;
+}
+.step-cta:hover { transform: translateY(-2px); }
+
+/* responsive for the card grids */
+@media (max-width: 900px) { .mini-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .mini-grid { grid-template-columns: 1fr; } }
 
 /* ===================== WHAT YOU GET ===================== */
 .offer {
