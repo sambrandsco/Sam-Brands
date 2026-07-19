@@ -75,7 +75,7 @@
 .dc-item:hover{transform:translateY(-6px);border-color:var(--yellow);
   box-shadow:0 0 40px rgba(255,204,0,0.18);}
 .dc-item-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
-.dc-num{font-size:30px;font-weight:900;color:rgba(255,204,0,0.25);line-height:1;}
+.dc-num{font-size:30px;font-weight:900;color:#FFCC00;line-height:1;}
 .dc-ico{width:44px;height:44px;border-radius:12px;
   background:linear-gradient(145deg,rgba(255,204,0,0.18),rgba(255,204,0,0.05));
   border:1px solid rgba(255,204,0,0.3);
