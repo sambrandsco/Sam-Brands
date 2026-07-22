@@ -654,7 +654,7 @@ html {
 .pricing {
   max-width: 1250px;
   margin: 0 auto;
-  padding: 80px 24px;
+ /* padding: 80px 24px;*/
   text-align: center;
 }
 
@@ -714,12 +714,12 @@ html {
   text-decoration: none;
   padding: 14px; border-radius: 10px;
 }
-/* outline style for the non-popular cards' buttons */
+/* outline style for the non-popular cards' buttons 
 .price-card:not(.popular) .plan-button {
   background: transparent;
   color: var(--yellow);
   border: 1px solid var(--yellow);
-}
+}*/
 
 /* phones: stack the cards */
 @media (max-width: 900px) {
