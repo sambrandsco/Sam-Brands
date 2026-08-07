@@ -26,18 +26,15 @@
 
 /* ---------- Founder section (photo + bio side by side) ---------- */
 .ab-founder {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 40px 24px 30px;
 
   display: grid;
-  /* Image column is narrower (0.72), text column is wider (1.28),
-     so the long bio has more room and the photo doesn't look small. */
-  grid-template-columns: 0.72fr 1.28fr;
+  grid-template-columns: 0.85fr 1.15fr;   /* image a bit bigger again */
   gap: 48px;
-  align-items: start;   /* line both columns up at the top */
+  align-items: start;
 }
-
 /* The photo frame */
 .ab-photo {
   border-radius: 18px;
@@ -272,4 +269,3 @@
   .ab-stat-num { font-size: 21px; }
 }
 
-.ab-founder { border: 5px solid red; }
