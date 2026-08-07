@@ -271,3 +271,5 @@
   .ab-stats { gap: 8px; }
   .ab-stat-num { font-size: 21px; }
 }
+
+.ab-founder { border: 5px solid red; }
