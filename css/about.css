@@ -241,9 +241,7 @@
 
 /* ===================== PAGE-SPECIFIC OVERRIDE ===================== */
 /* Hide the shared header button on the About page only */
-.about-page .header-button {
-  display: none;
-}
+
 
 /* ===================== RESPONSIVE ===================== */
 
