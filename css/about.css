@@ -1,91 +1,273 @@
 /* ===================== ABOUT SAM PAGE ===================== */
-.ab-hero{max-width:900px;margin:0 auto;padding:65px 24px 10px;text-align:center;}
-.ab-pill{display:inline-block;background:rgba(255,204,0,0.12);color:var(--yellow);
-  font-size:12px;font-weight:700;letter-spacing:1.5px;padding:7px 18px;border-radius:20px;margin-bottom:18px;}
-.ab-hero h1{font-size:clamp(2.4rem,6vw,3.6rem);font-weight:900;line-height:1.1;}
 
-/* founder */
-.ab-founder{max-width:1050px;margin:0 auto;padding:40px 24px 30px;
-  display:grid;grid-template-columns:0.85fr 1.15fr;gap:48px;align-items:center;}
-.ab-photo{border-radius:18px;overflow:hidden;line-height:0;border:1px solid var(--border);}
-.ab-photo img{width:100%;height:auto;display:block;}
-.ab-bio h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:20px;}
-.ab-bio p{color:var(--gray);font-size:16px;line-height:1.75;margin-bottom:16px;}
-.ab-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
-.ab-stat{background:var(--card);border:1px solid var(--border);border-radius:14px;
-  padding:20px 12px;text-align:center;transition:transform .25s,border-color .25s,box-shadow .25s;}
-.ab-stat:hover{transform:translateY(-4px);border-color:var(--yellow);box-shadow:0 0 30px rgba(255,204,0,0.15);}
-.ab-stat-num{font-size:26px;font-weight:900;color:var(--yellow);line-height:1;}
-.ab-stat-label{font-size:12.5px;color:var(--gray);margin-top:7px;}
-
-/* social */
-.ab-social{max-width:900px;margin:0 auto;padding:50px 24px 70px;text-align:center;}
-.ab-social-title{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:900;}
-.ab-social-sub{color:var(--gray);font-size:16px;margin:14px auto 40px;max-width:520px;}
-.ab-social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-.ab-social-card{display:flex;align-items:center;gap:16px;text-align:left;
-  background:linear-gradient(150deg,#1b1b22,#141419);border:1px solid var(--border);
-  border-radius:16px;padding:20px 22px;text-decoration:none;color:inherit;
-  transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;}
-.ab-social-card:hover{transform:translateY(-5px);border-color:var(--yellow);
-  box-shadow:0 0 40px rgba(255,204,0,0.18);}
-.ab-social-ico{width:50px;height:50px;flex-shrink:0;border-radius:13px;
-  background:linear-gradient(145deg,rgba(255,204,0,0.18),rgba(255,204,0,0.05));
-  border:1px solid rgba(255,204,0,0.3);
-  display:flex;align-items:center;justify-content:center;color:var(--yellow);}
-.ab-social-ico svg{width:26px;height:26px;}
-.ab-social-meta{display:flex;flex-direction:column;flex:1;}
-.ab-social-name{font-size:17px;font-weight:700;color:#fff;}
-.ab-social-handle{font-size:13.5px;color:var(--gray);margin-top:2px;}
-.ab-social-arrow{color:var(--gray);font-size:20px;transition:color .25s, transform .25s;}
-.ab-social-card:hover .ab-social-arrow{color:var(--yellow);transform:translate(2px,-2px);}
-
-/* cta */
-.ab-cta{margin-top:44px;}
-.ab-cta-btn{display:inline-block;background:var(--yellow);color:var(--dark-text);
-  font-size:16px;font-weight:700;text-decoration:none;padding:16px 40px;border-radius:30px;
-  box-shadow:0 0 30px rgba(255,204,0,0.35);transition:transform .2s, box-shadow .2s;}
-.ab-cta-btn:hover{transform:translateY(-2px);box-shadow:0 0 42px rgba(255,204,0,0.5);}
-
-@media (max-width:820px){
-  .ab-founder{grid-template-columns:1fr;gap:30px;max-width:560px;}
-  .ab-photo{max-width:400px;margin:0 auto;}
+/* ---------- Hero ---------- */
+.ab-hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 65px 24px 10px;
+  text-align: center;
 }
-@media (max-width:600px){
-  .ab-social-grid{grid-template-columns:1fr;}
-  .ab-stats{gap:8px;}
-  .ab-stat-num{font-size:21px;}
+.ab-pill {
+  display: inline-block;
+  background: rgba(255, 204, 0, 0.12);
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 7px 18px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+.ab-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.1;
 }
 
-/* hide the shared header button on the About page only */
-.about-page .header-button{display:none;}
+/* ---------- Founder section (photo + bio side by side) ---------- */
+.ab-founder {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 24px 30px;
 
-/* ===== animated social cards ===== */
-.ab-social-card{
-  opacity:0;
-  transform:translateY(24px);
-  animation:ab-rise .6s ease forwards;
+  display: grid;
+  /* Image column is narrower (0.72), text column is wider (1.28),
+     so the long bio has more room and the photo doesn't look small. */
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 48px;
+  align-items: start;   /* line both columns up at the top */
 }
-.ab-social-grid .ab-social-card:nth-child(1){animation-delay:.05s;}
-.ab-social-grid .ab-social-card:nth-child(2){animation-delay:.13s;}
-.ab-social-grid .ab-social-card:nth-child(3){animation-delay:.21s;}
-.ab-social-grid .ab-social-card:nth-child(4){animation-delay:.29s;}
-.ab-social-grid .ab-social-card:nth-child(5){animation-delay:.37s;}
-.ab-social-grid .ab-social-card:nth-child(6){animation-delay:.45s;}
-@keyframes ab-rise{to{opacity:1;transform:translateY(0);}}
 
-/* icon pops + shimmer on hover */
-.ab-social-ico{transition:transform .3s ease, background .3s ease, border-color .3s ease;}
-.ab-social-card:hover .ab-social-ico{
-  transform:scale(1.12) rotate(-6deg);
-  background:linear-gradient(145deg,rgba(255,204,0,0.35),rgba(255,204,0,0.12));
-  border-color:var(--yellow);
+/* The photo frame */
+.ab-photo {
+  border-radius: 18px;
+  overflow: hidden;
+  line-height: 0;
+  border: 1px solid var(--border);
+
+  /* "sticky" = the photo stays in view and follows you as you
+     scroll past the long bio text next to it. */
+  position: sticky;
+  top: 24px;
 }
-/* subtle sheen sweep across the card on hover */
-.ab-social-card{position:relative;overflow:hidden;}
-.ab-social-card::after{
-  content:"";position:absolute;top:0;left:-75%;width:50%;height:100%;
-  background:linear-gradient(120deg,transparent,rgba(255,204,0,0.10),transparent);
-  transform:skewX(-20deg);transition:left .6s ease;pointer-events:none;
+.ab-photo img {
+  width: 100%;
+  height: auto;      /* photo keeps its natural shape, no cropping */
+  display: block;
 }
-.ab-social-card:hover::after{left:130%;}
+
+/* ---------- Bio text ---------- */
+.ab-bio h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.ab-bio p {
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* ---------- Stat cards (9,580 / $500K / 100%) ---------- */
+.ab-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.ab-stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 12px;
+  text-align: center;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.ab-stat:hover {
+  transform: translateY(-4px);
+  border-color: var(--yellow);
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.15);
+}
+.ab-stat-num {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--yellow);
+  line-height: 1;
+}
+.ab-stat-label {
+  font-size: 12.5px;
+  color: var(--gray);
+  margin-top: 7px;
+}
+
+/* ===================== SOCIAL LINKS ===================== */
+.ab-social {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 24px 70px;
+  text-align: center;
+}
+.ab-social-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  font-weight: 900;
+}
+.ab-social-sub {
+  color: var(--gray);
+  font-size: 16px;
+  margin: 14px auto 40px;
+  max-width: 520px;
+}
+.ab-social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Each social card */
+.ab-social-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  background: linear-gradient(150deg, #1b1b22, #141419);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 22px;
+  text-decoration: none;
+  color: inherit;
+
+  /* start hidden and slightly lower — the entrance animation
+     (further down) fades each card up into place. */
+  opacity: 0;
+  transform: translateY(24px);
+  animation: ab-rise 0.6s ease forwards;
+
+  /* needed so the shine sweep stays inside the card */
+  position: relative;
+  overflow: hidden;
+
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Lift + glow yellow on hover */
+.ab-social-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--yellow);
+  box-shadow: 0 0 40px rgba(255, 204, 0, 0.18);
+}
+
+/* The icon tile inside each card */
+.ab-social-ico {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: linear-gradient(145deg, rgba(255, 204, 0, 0.18), rgba(255, 204, 0, 0.05));
+  border: 1px solid rgba(255, 204, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+.ab-social-ico svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Icon pops + tilts on hover */
+.ab-social-card:hover .ab-social-ico {
+  transform: scale(1.12) rotate(-6deg);
+  background: linear-gradient(145deg, rgba(255, 204, 0, 0.35), rgba(255, 204, 0, 0.12));
+  border-color: var(--yellow);
+}
+
+/* Text next to the icon */
+.ab-social-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ab-social-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+}
+.ab-social-handle {
+  font-size: 13.5px;
+  color: var(--gray);
+  margin-top: 2px;
+}
+
+/* The little arrow on the right */
+.ab-social-arrow {
+  color: var(--gray);
+  font-size: 20px;
+  transition: color 0.25s, transform 0.25s;
+}
+.ab-social-card:hover .ab-social-arrow {
+  color: var(--yellow);
+  transform: translate(2px, -2px);
+}
+
+/* A subtle light "sheen" sweeps across the card on hover */
+.ab-social-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 204, 0, 0.10), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.ab-social-card:hover::after {
+  left: 130%;
+}
+
+/* Entrance animation — cards fade up one after another (staggered) */
+@keyframes ab-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.ab-social-grid .ab-social-card:nth-child(1) { animation-delay: 0.05s; }
+.ab-social-grid .ab-social-card:nth-child(2) { animation-delay: 0.13s; }
+.ab-social-grid .ab-social-card:nth-child(3) { animation-delay: 0.21s; }
+.ab-social-grid .ab-social-card:nth-child(4) { animation-delay: 0.29s; }
+.ab-social-grid .ab-social-card:nth-child(5) { animation-delay: 0.37s; }
+.ab-social-grid .ab-social-card:nth-child(6) { animation-delay: 0.45s; }
+
+/* ===================== PAGE-SPECIFIC OVERRIDE ===================== */
+/* Hide the shared header button on the About page only */
+.about-page .header-button {
+  display: none;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* On tablets/phones: stack the photo on top of the bio,
+   and turn OFF sticky (there's nothing to scroll past when stacked). */
+@media (max-width: 820px) {
+  .ab-founder {
+    grid-template-columns: 1fr;   /* single column = stacked */
+    gap: 30px;
+    max-width: 560px;
+  }
+  .ab-photo {
+    max-width: 400px;
+    margin: 0 auto;
+    position: static;   /* cancel the sticky behavior */
+    top: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ab-social-grid { grid-template-columns: 1fr; }
+  .ab-stats { gap: 8px; }
+  .ab-stat-num { font-size: 21px; }
+}
